@@ -1,0 +1,35 @@
+[repository]
+name = "pos"
+managed_by_uv = false
+changelog = "CHANGELOG.md"
+version = "version.txt"
+compose = "docker-compose.yml"
+
+[repository.towncrier]
+section = "Project"
+settings = "towncrier.toml"
+
+[backend]
+path = "backend"
+
+[backend.package]
+name = "pos"
+path = "backend"
+changelog = "backend/CHANGELOG.md"
+towncrier_settings = "backend/pyproject.toml"
+publish = false
+
+[frontend]
+path = "frontend"
+
+[frontend.package]
+name = "volto-pos"
+path = "frontend/packages/volto-pos"
+changelog = "frontend/packages/volto-pos/CHANGELOG.md"
+towncrier_settings = "frontend/packages/volto-pos/towncrier.toml"
+publish = false
+
+[cookieplone]
+template = "project"
+template_version = "8bb7d06fd3f7665e5cd6ec427985d5654af5af44"
+generated_date = "2025-03-26 12:54:26"
